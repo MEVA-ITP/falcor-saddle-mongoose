@@ -1,0 +1,35 @@
+{
+  "name": "meva-falcor-saddle",
+  "version": "1.0.0",
+  "description": "Falcor Saddle for MEVA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build && npx babel source/ -d build/ --quiet",
+    "prestart": "npm run build",
+    "start": "cd build && node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MEVA-ITP/meva-falcor-saddle.git"
+  },
+  "author": "https://github.com/MEVA-ITP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MEVA-ITP/meva-falcor-saddle/issues"
+  },
+  "homepage": "https://github.com/MEVA-ITP/meva-falcor-saddle#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "mongoose": "^5.3.15",
+    "validate.js": "^0.12.0",
+    "falcor-json-graph": "^2.2.2",
+    "falcor-router": "^0.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/preset-env": "^7.2.0"
+  }
+}
